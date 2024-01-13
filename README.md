@@ -5,6 +5,8 @@ Welcome to the Discussion Analyzer—a cutting-edge Streamlit web application th
 **Objective:**
 The goal of this project is to build a comprehensive system that gauges sentiments and discussions circulating around a specific political topic in a chosen city. The approach involves fetching top news topics, extracting keywords, gathering Reddit comments, and employing sentiment analysis.
 
+**APPROACH :**
+
 ***Step 1: Fetching Top Topics for a City***
 In the initial step, I utilized the News API to gather real-time news about a specified city. The fetch_top_topics function takes parameters such as the country code, API key, and city name to retrieve the top news topics. This sets the foundation for understanding what is currently being discussed in the city.
 
