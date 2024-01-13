@@ -2,6 +2,8 @@
 
 Welcome to the Discussion Analyzer—a cutting-edge Streamlit web application that harnesses the power of Hugging Face's BERTweet model to decode emotions embedded in Reddit conversations. This tech-savvy tool seamlessly integrates top news topics related to your chosen city, providing a captivating visualization of prevailing sentiments.
 
+**[Live Demo](https://reddit-discussion-analyzer.streamlit.app/)**
+
 ### Features:
 
 - **Emotion Analysis:** Leverage Hugging Face's BERTweet model to unearth the emotional undercurrents within Reddit comments.
