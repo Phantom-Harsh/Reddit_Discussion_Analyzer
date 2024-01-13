@@ -2,14 +2,21 @@
 
 Welcome to the Discussion Analyzer—a cutting-edge Streamlit web application that harnesses the power of Hugging Face's BERTweet model to decode emotions embedded in Reddit conversations. This tech-savvy tool seamlessly integrates top news topics related to your chosen city, providing a captivating visualization of prevailing sentiments.
 
-**APPROACH**
-***Step 1*** : In the Tasks.ipynb file I have mentioned what I have done in the code, my approach was to fetch_top_topics of a city: This function takes three parameters: (country_code, api_key, and city_name). So for news source I used News API Key to get news online and current about that particular city.
+**Objective:**
+The goal of this project is to build a comprehensive system that gauges sentiments and discussions circulating around a specific political topic in a chosen city. The approach involves fetching top news topics, extracting keywords, gathering Reddit comments, and employing sentiment analysis.
 
-***Step 2*** : So first I created extract_keywords function to extract keywords from the news headline which we got from output of step 1 .Then I used fetch_reddit_comments function using PRAW library to fetch comments from Reddit which will return the reddit live comments. Here I used my reddit API Credentials.
+***Step 1: Fetching Top Topics for a City***
+In the initial step, I utilized the News API to gather real-time news about a specified city. The fetch_top_topics function takes parameters such as the country code, API key, and city name to retrieve the top news topics. This sets the foundation for understanding what is currently being discussed in the city.
 
-***Step 3*** : I used a pre-trained model to analyze the sentiment or emotion expressed in discussions gathered from Reddit. I created a function get_most_probable_emotion which finds in the dictionary with the highest 'score' (probability) of it and then Extracts the emotion label from that dictionary and returns it as the most probable emotion.
+***Step 2: Extracting Keywords and Fetching Reddit Comments***
+To delve deeper into discussions, I employed the extract_keywords function to pull out keywords from the news headlines obtained in Step 1. These keywords act as focal points for further analysis. Subsequently, I used the PRAW library to fetch comments from Reddit using the fetch_reddit_comments function. This step provides a real-time perspective from public forums.
 
-***Step 4*** : 
+***Step 3: Sentiment Analysis Using a Pre-trained Model***
+Sentiment analysis is crucial in understanding the overall mood of discussions. I incorporated a pre-trained model to analyze the sentiment or emotion expressed in the Reddit comments. The get_most_probable_emotion function extracts the most probable emotion from the model's output, providing a nuanced perspective on the discussions.
+
+***Step 4: Building a Front-End with Streamlit***
+To make the insights accessible, I developed a user-friendly front-end using Streamlit. This web application allows users to input a city name, select relevant sources (News API and Reddit), and view the analyzed results. The application provides a structured display of top news topics, sentiment analysis, and key comments from Reddit discussions.
+
 
 **[Live Demo](https://reddit-discussion-analyzer.streamlit.app/)**
 
