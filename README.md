@@ -2,6 +2,15 @@
 
 Welcome to the Discussion Analyzer—a cutting-edge Streamlit web application that harnesses the power of Hugging Face's BERTweet model to decode emotions embedded in Reddit conversations. This tech-savvy tool seamlessly integrates top news topics related to your chosen city, providing a captivating visualization of prevailing sentiments.
 
+**APPROACH**
+***Step 1*** : In the Tasks.ipynb file I have mentioned what I have done in the code, my approach was to fetch_top_topics of a city: This function takes three parameters: (country_code, api_key, and city_name). So for news source I used News API Key to get news online and current about that particular city.
+
+***Step 2*** : So first I created extract_keywords function to extract keywords from the news headline which we got from output of step 1 .Then I used fetch_reddit_comments function using PRAW library to fetch comments from Reddit which will return the reddit live comments. Here I used my reddit API Credentials.
+
+***Step 3*** : I used a pre-trained model to analyze the sentiment or emotion expressed in discussions gathered from Reddit. I created a function get_most_probable_emotion which finds in the dictionary with the highest 'score' (probability) of it and then Extracts the emotion label from that dictionary and returns it as the most probable emotion.
+
+***Step 4*** : 
+
 **[Live Demo](https://reddit-discussion-analyzer.streamlit.app/)**
 
 ### Features:
